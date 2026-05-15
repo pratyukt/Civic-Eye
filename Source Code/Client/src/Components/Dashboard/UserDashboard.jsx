@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import {
   User,
   Mail,
@@ -16,9 +17,11 @@ import {
 } from 'lucide-react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { routes } from '../../data/routes';
 
 function UserDashboard() {
   const userData = useSelector((store) => store.userData);
+  const navigate = useNavigate();
   const [stats, setStats] = useState({
     total: 0,
     pending: 0,
@@ -275,19 +278,19 @@ function UserDashboard() {
 
         {/* Quick Actions */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-gradient-to-br from-blue-500 to-indigo-600 text-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
+          <div onClick={() => navigate(routes.raiseComplaint)} className="bg-gradient-to-br from-blue-500 to-indigo-600 text-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
             <TrendingUp className="w-8 h-8 mb-3" />
             <h3 className="text-lg font-bold mb-1">Raise New Complaint</h3>
             <p className="text-sm text-blue-100">Submit a new issue or concern</p>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-500 to-pink-600 text-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
+          <div onClick={() => navigate(routes.seeComplaints)} className="bg-gradient-to-br from-purple-500 to-pink-600 text-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
             <FileText className="w-8 h-8 mb-3" />
             <h3 className="text-lg font-bold mb-1">View All Complaints</h3>
             <p className="text-sm text-purple-100">Track all your submissions</p>
           </div>
 
-          <div className="bg-gradient-to-br from-green-500 to-teal-600 text-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
+          <div onClick={() => navigate(routes.userComplaint)} className="bg-gradient-to-br from-green-500 to-teal-600 text-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer">
             <Activity className="w-8 h-8 mb-3" />
             <h3 className="text-lg font-bold mb-1">Check Status</h3>
             <p className="text-sm text-green-100">Monitor complaint progress</p>

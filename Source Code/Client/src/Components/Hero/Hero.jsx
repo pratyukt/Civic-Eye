@@ -323,12 +323,12 @@ const Hero = () => {
                 </div>
 
                 <div className="flex gap-4">
-                  <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-xl font-semibold transition-all duration-300 shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 hover:scale-105">
+                  <Link to={routes.userLogin} className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-xl font-semibold transition-all duration-300 shadow-lg shadow-purple-500/50 hover:shadow-purple-500/70 hover:scale-105">
                     File a Complaint
-                  </button>
-                  <button className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-xl font-semibold transition-all duration-300 border border-white/20 hover:border-white/40">
+                  </Link>
+                  <Link to={routes.aboutUs} className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-xl font-semibold transition-all duration-300 border border-white/20 hover:border-white/40">
                     Learn More
-                  </button>
+                  </Link>
                 </div>
               </div>
 
@@ -502,9 +502,9 @@ const Hero = () => {
           </div>
 
           <div className="text-center mt-12">
-            <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 rounded-xl font-semibold transition-all duration-300 shadow-lg shadow-green-500/50 hover:shadow-green-500/70">
+            <Link to={routes.aboutUs} className="inline-block px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 rounded-xl font-semibold transition-all duration-300 shadow-lg shadow-green-500/50 hover:shadow-green-500/70">
               View All Success Stories
-            </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -585,13 +585,13 @@ const Hero = () => {
             Your voice matters, and we're here to make sure it's heard.
           </p>
           <div className="flex gap-4 justify-center">
-            <button className="px-10 py-5 bg-white text-purple-900 hover:bg-gray-100 rounded-xl font-bold text-lg transition-all duration-300 shadow-2xl hover:scale-105">
+            <Link to={routes.userSignup} className="px-10 py-5 bg-white text-purple-900 hover:bg-gray-100 rounded-xl font-bold text-lg transition-all duration-300 shadow-2xl hover:scale-105">
               Get Started Now
-            </button>
-            <button className="px-10 py-5 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-xl font-bold text-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center gap-2">
+            </Link>
+            <Link to={routes.contactSupport} className="px-10 py-5 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-xl font-bold text-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center gap-2">
               <Phone className="w-5 h-5" />
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -610,19 +610,19 @@ const Hero = () => {
             <div>
               <h4 className="font-bold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li className="hover:text-white cursor-pointer">About Us</li>
-                <li className="hover:text-white cursor-pointer">Departments</li>
-                <li className="hover:text-white cursor-pointer">Success Stories</li>
-                <li className="hover:text-white cursor-pointer">FAQs</li>
+                <li><Link to={routes.aboutUs} className="hover:text-white transition-colors">About Us</Link></li>
+                <li><Link to={routes.departmentInfo} className="hover:text-white transition-colors">Departments</Link></li>
+                <li><Link to={routes.departmentWorks} className="hover:text-white transition-colors">Department Works</Link></li>
+                <li><Link to={routes.contactSupport} className="hover:text-white transition-colors">Contact Support</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold mb-4">For Citizens</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li className="hover:text-white cursor-pointer">File Complaint</li>
-                <li className="hover:text-white cursor-pointer">Track Status</li>
-                <li className="hover:text-white cursor-pointer">User Guide</li>
-                <li className="hover:text-white cursor-pointer">Support</li>
+                <li><Link to={routes.userLogin} className="hover:text-white transition-colors">File Complaint</Link></li>
+                <li><Link to={routes.userLogin} className="hover:text-white transition-colors">Track Status</Link></li>
+                <li><Link to={routes.userSignup} className="hover:text-white transition-colors">User Signup</Link></li>
+                <li><Link to={routes.contactSupport} className="hover:text-white transition-colors">Support</Link></li>
               </ul>
             </div>
             <div>

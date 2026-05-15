@@ -97,7 +97,7 @@ export default function DepartmentDashboard() {
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-            Welcome, {deptData.headOfDepartment}! 🏛️
+            Welcome, {deptData.HeadOfDepartment}! 🏛️
           </h1>
           <p className="text-gray-600">
             Here’s an overview of your department’s complaints and activity
@@ -127,7 +127,7 @@ export default function DepartmentDashboard() {
                     Department Name
                   </p>
                   <p className="text-sm font-semibold text-gray-900">
-                    {deptData.departmentName}
+                    {deptData.DepartmentName}
                   </p>
                 </div>
               </div>

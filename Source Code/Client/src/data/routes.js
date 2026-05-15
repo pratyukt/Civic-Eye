@@ -8,6 +8,8 @@ export const routes = {
     deptSignUp:'/dept-signUp',
     deptLogin:'/dept-login',
     departmentInfo:'/department-state',
+    departmentWorks:'/department-works',
+    contactSupport:'/contact-support',
     raiseComplaint:'/raise-complaint',
     adminLogin:'/admin-login',
     adminDashboard:"/admin-dashboard",
@@ -16,5 +18,6 @@ export const routes = {
     seeComplaints:'/all-complaint',
     userComplaint:"/user-complaint",
     deptComplaint:"/dept-complaint",
-    activeComplaint:"/active-complaint"
+    activeComplaint:"/active-complaint",
+    profile:"/profile"
 };

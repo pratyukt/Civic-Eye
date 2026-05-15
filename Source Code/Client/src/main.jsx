@@ -33,6 +33,9 @@ import ActiveComplaint from './Components/DepartmentComplaint/ActiveComplaint.js
 import UnverifiedDepartments from './Components/Admin/UnverifiedDepartments.jsx';
 import UnsolvedComplaints from './Components/Admin/UnsolvedComplaints.jsx';
 import AdminDashboardHome from './Components/Admin/AdminDashboardHome.jsx';
+import ContactSupport from './Components/screens/ContactSupport.jsx';
+import DepartmentWorks from './Components/screens/DepartmentWorks.jsx';
+import UserProfile from './Components/screens/UserProfile.jsx';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -52,6 +55,8 @@ const router = createBrowserRouter(
       
       <Route path="/" element={<Hero />}></Route>
       <Route path={routes.aboutUs} element={<><Header /><AboutUs /><Footer /></>}></Route>
+      <Route path={routes.contactSupport} element={<><Header /><ContactSupport /><Footer /></>}></Route>
+      <Route path={routes.departmentWorks} element={<><Header /><DepartmentWorks /><Footer /></>}></Route>
       <Route path={routes.departmentInfo} element={<><Header /><AllStates /><Footer/></>}></Route>
       <Route path={`${routes.departmentInfo}/:param`} element={<><Header /><AllDistricts /><Footer/></>}></Route>
       <Route path={`${routes.departmentInfo}/:param/:district`} element={<><Header /><AllDepartment /><Footer/></>}></Route>
@@ -66,6 +71,7 @@ const router = createBrowserRouter(
         <Route path={routes.userComplaint} element={<OAuth><UserComplaint/></OAuth>}></Route>
         <Route path={routes.deptComplaint} element={<OAuth><DepartmentComplaint/></OAuth>}></Route>
         <Route path={routes.activeComplaint} element={<OAuth><ActiveComplaint/></OAuth>}></Route>
+        <Route path={routes.profile} element={<OAuth><UserProfile/></OAuth>}></Route>
       </Route>
       <Route path='*' element={<NotFound />}></Route>
     </>

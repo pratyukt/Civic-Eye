@@ -15,7 +15,7 @@ const NotFound = () => {
         {/* Navigation Options */}
         <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
           <Link 
-            to="#" 
+            to="/" 
             className="inline-block px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-200"
           >
             Go Home

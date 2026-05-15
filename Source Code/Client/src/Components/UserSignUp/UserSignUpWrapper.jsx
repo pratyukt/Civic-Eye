@@ -59,6 +59,7 @@ const UserSignUpWrapper = () => {
     setIsOtpLoading(true)
     if (!email) {
       notifyError("Please enter email first")
+      setIsOtpLoading(false)
       return;
     }
     try {

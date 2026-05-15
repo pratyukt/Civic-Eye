@@ -41,16 +41,16 @@ export default function DeptSidebarNavigation() {
     { id: "AllComplaints", text: "All Complaints", icon: CheckCircle, navigateTo: routes.seeComplaints },
     { id: "deptComplaint", text: "Received Complaints", icon: TrendingUp, navigateTo: routes.deptComplaint },
     { id: "activeComplaint", text: "Active Complaints", icon: BadgeCheck, navigateTo: routes.activeComplaint },
-    { id: "Areas", text: "Issue In Areas", icon: MapPin, navigateTo: routes.issueAreas },
-    { id: "Announcements", text: "Announcements", icon: Bell, navigateTo: routes.announcements },
-    { id: "Settings", text: "Settings", icon: Settings, navigateTo: routes.settings },
-    { id: "Feedback", text: "Feedback & Ratings", icon: Star, navigateTo: routes.feedback },
+    { id: "Areas", text: "Issue In Areas", icon: MapPin },
+    { id: "Announcements", text: "Announcements", icon: Bell },
+    { id: "Settings", text: "Settings", icon: Settings },
+    { id: "Feedback", text: "Feedback & Ratings", icon: Star },
   ];
 
   const toggleSidebar = () => setIsOpen(!isOpen);
 
   const handleItemClick = (item) => {
-    navigate(item.navigateTo);
+    if (item.navigateTo) navigate(item.navigateTo);
     if (isMobile) setIsOpen(false);
   };
 
@@ -94,7 +94,7 @@ export default function DeptSidebarNavigation() {
               </div>
               <div>
                 <h2 className="font-semibold text-lg truncate">{deptData.DepartmentName}</h2>
-                <h3 className="text-sm text-blue-100">{deptData.departmentShortName}</h3>
+                <h3 className="text-sm text-blue-100">{deptData.DepartmentShortName}</h3>
                 <p className="text-blue-100 text-xs truncate">{deptData.email}</p>
               </div>
             </div>

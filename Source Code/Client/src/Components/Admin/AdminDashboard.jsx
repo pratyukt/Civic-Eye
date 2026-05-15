@@ -28,7 +28,7 @@ const AdminDashboard = ({ children }) => {
       id: 'dashboard',
       label: 'Dashboard',
       icon: LayoutDashboard,
-      path: '/admin/dashboard'
+      path: '/admin-dashboard'
     },
     {
       id: 'unverified',

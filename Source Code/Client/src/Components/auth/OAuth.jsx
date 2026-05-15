@@ -16,6 +16,7 @@ function OAuth({ children }) {
     const authenticator = async () => {
         const token = localStorage.getItem("token");
         if (!token) {
+            setIsLoading(false)
             navigate(routes.userLogin)
         } else {
             try {
